@@ -1,0 +1,100 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.yt.sportservice">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:name=".KApplication"
+        android:requiredForAllUsers="true"
+        android:hardwareAccelerated="true"
+        android:restoreAnyVersion="true"
+        android:theme="@style/AppTheme" >
+
+        <!-- 声明service组件 -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote"></service>
+
+        <!-- AK鉴权 -->
+        <!-- meta-data需要写在application中 -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="5xUazglNWvMw3VMtySSpVXFQc5C19wtW" />
+
+        <!--<activity android:name=".SportClient"-->
+            <!--android:label="@string/app_name"-->
+            <!--android:launchMode="singleTask"-->
+            <!--android:clearTaskOnLaunch="true"-->
+            <!--android:stateNotNeeded="true"-->
+            <!--android:configChanges="mcc|mnc"-->
+            <!--android:windowSoftInputMode="adjustPan"-->
+            <!--android:screenOrientation="nosensor"-->
+            <!--android:resumeWhilePausing="true"-->
+            <!--android:taskAffinity=""-->
+            <!--android:enabled="true">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+                <!--<category android:name="android.intent.category.HOME" />-->
+                <!--<category android:name="android.intent.category.DEFAULT" />-->
+            <!--</intent-filter>-->
+        <!--</activity>-->
+
+        <activity android:name=".acty.SportLauncherActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:clearTaskOnLaunch="true"
+            android:stateNotNeeded="true"
+            android:configChanges="mcc|mnc"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="nosensor"
+            android:resumeWhilePausing="true"
+            android:taskAffinity=""
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".acty.GPSTestActivity"></activity>
+
+        <service
+            android:name=".SportService"
+            android:enabled="true"
+            android:exported="false"></service>
+
+        <service
+            android:name=".service.StepService"
+            android:priority="1000">
+            <intent-filter>
+                <action android:name="android.intent.action.DATE_CHANGED" />
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:name=".service.HeartrateService"
+            >
+        </service>
+        <service
+            android:name=".service.FunctionLocService"
+            >
+        </service>
+
+    </application>
+</manifest>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@id/user_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_et_bg"
+        android:nextFocusDown="@id/password"
+        android:imeOptions="actionNext"
+        android:singleLine="true"
+        android:hint="请输入用户名"/>
+
+    <EditText
+        android:id="@id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/ic_et_bg"
+        android:nextFocusDown="@id/register"
+        android:imeOptions="actionNext"
+        android:singleLine="true"
+        android:hint="请输入密码"/>
+
+    <Button
+        android:id="@id/register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:imeOptions="actionGo"
+        android:text="注册"/>
+
+    <Button
+        android:id="@+id/unregister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="取消注册"/>
+
+</LinearLayout>

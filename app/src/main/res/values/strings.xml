@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">"云天运动"</string>
+    <string name="text_state_pair">"Matching "</string>
+    <string name="text_state_ready">"ready"</string>
+    <string name="text_state_class">"Attend class"</string>
+    <string name="text_state_pair_fail">"Matching "</string>
+    <string name="text_state_pair_idle">"Idle "</string>
+    <string name="text_state_pair_warn">"Warning"</string>
+
+
+    <string name="text_student_sn">A 12345</string>
+    <string name="student_name">Deng ZiHan</string>
+    <string name="student_number">NO.: 10</string>
+	<string name="setp_title">Step</string>
+    <string name="setp_unit">Step</string>
+    <string name="remind_movement">Refueling, remember to pay attention to exercise</string>
+    <string name="running_distance">Distance</string>
+    <string name="kilometre">Km</string>
+    <string name="step_count">Step count</string>
+    <string name="not_support_step_count">The device does not support step-by-step</string>
+    <string name="today">Today</string>
+    <string name="now">Now</string>
+    <string name="yesterday">Yesterday</string>
+    <string name="sun">SU</string>
+    <string name="one">MO</string>
+    <string name="two">TU</string>
+    <string name="three">WE</string>
+    <string name="four">TH</string>
+    <string name="five">FR</string>
+    <string name="six">SA</string>
+    <string name="sunday">Sunday</string>
+    <string name="monday">Monday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
+    <string name="saturday">Saturday</string>
+    <string name="target">Target </string>
+    <string name="today_steps">Today Steps</string>
+    <string name="care_words">Come on, remember to work harder</string>
+    <string name="counter">Step Counter</string>
+</resources>
